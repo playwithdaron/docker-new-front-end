@@ -1,0 +1,75 @@
+.sidebar_container {
+  grid-row: 2 / -1;
+  width: 283px;
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px); // cal based on header height
+  overflow-y: auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  .dashboard {
+    margin-top: 40px;
+    margin-left: 20px;
+    color: #213f7d;
+    font-size: 16px;
+    div:nth-child(2) {
+      margin: 52px 10px 41px 10px;
+      img {
+        margin-right: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: #545f7d;
+      }
+    }
+    .organization {
+      display: flex;
+      span {
+        margin: auto 10px;
+      }
+      svg {
+        margin: auto 0 auto 10px;
+      }
+    }
+  }
+
+  .customers,
+  .businesses,
+  .settings {
+    p:nth-child(1) {
+      font-size: 12px;
+      font-weight: 500;
+      color: #545f7d;
+      margin-top: 40px;
+      margin-left: 30px;
+    }
+    .side_con {
+      display: flex;
+      gap: 5px;
+      margin: 20px auto;
+      padding: 10px;
+      &.active {
+        background-color: #f3fcfc;
+        border-left: 3px solid;
+        border-left-color: #39cdcc;
+      }
+
+      a {
+        color: #213f7d;
+        font-size: 16px;
+        font-weight: 400;
+        color: #545f7d;
+        margin: auto 0;
+        text-decoration: none;
+      }
+      img {
+        margin: auto 5px auto 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+.sidebar_container{
+  display:  none;
+
+}}
